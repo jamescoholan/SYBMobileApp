@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, Button } from 'react-native';
 import { ScrollView, } from 'react-native-gesture-handler';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View,} from '../components/Themed';
@@ -18,6 +18,13 @@ export default function TabOneScreen() {
      
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+
+      <Button
+    title="Play Tunes"
+    onPress={() => {
+        console.log('pressed');
+    }}
+/>
     
     </View>
   );
@@ -25,7 +32,7 @@ export default function TabOneScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 6,
     alignItems: 'center',
     justifyContent: 'center',
   },
