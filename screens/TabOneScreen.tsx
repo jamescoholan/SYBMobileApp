@@ -1,15 +1,24 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
-
+import { StyleSheet, Image } from 'react-native';
+import { ScrollView, } from 'react-native-gesture-handler';
 import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+import { Text, View,} from '../components/Themed';
+
+
+//<Text style={styles.title}>SYB</Text>
 
 export default function TabOneScreen() {
   return (
+    
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
+      <Image
+        source={require('../assets/images/SYBLogo.png')}
+        style={{width: 200, height: 60}}
+      />
+     
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+    
     </View>
   );
 }
@@ -21,7 +30,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 20,
+    fontSize: 50,
     fontWeight: 'bold',
   },
   separator: {
