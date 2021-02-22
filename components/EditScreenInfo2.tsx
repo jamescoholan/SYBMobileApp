@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import Colors from '../constants/Colors';
 import { MonoText } from './StyledText';
-import { Text, View, Image } from './Themed';
+import { Text, View, } from './Themed';
 
 export default function EditScreenInfo2({ path }: { path: string }) {
   return (
@@ -11,7 +11,7 @@ export default function EditScreenInfo2({ path }: { path: string }) {
       <View style={styles.helpContainer}>
         <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
           <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-           SYB {'\n'} Instagram
+           SYB{'\n'}Instagram
           </Text>
         </TouchableOpacity>
       </View>
@@ -91,5 +91,12 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginBottom: 30,
     marginTop: 30,
+    textShadowRadius:0,
+    textShadowOffset: {width: 4,height: 4},
+    textShadowColor: 'rgba(255,255,255, 0.3)',
+    textDecorationLine: 'underline',
+    fontFamily: 'AvenirNext-Bold',
+    letterSpacing: 8,
+    textDecorationStyle: 'double',
   },
 });

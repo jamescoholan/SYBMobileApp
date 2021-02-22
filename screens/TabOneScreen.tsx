@@ -4,7 +4,6 @@ import { ScrollView, } from 'react-native-gesture-handler';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View,} from '../components/Themed';
 
-
 //<Text style={styles.title}>SYB</Text>
 
 export default function TabOneScreen() {
@@ -26,8 +25,8 @@ export default function TabOneScreen() {
     onPress={() => {
         console.log('pressed');
     }}
-/>
     
+/>
     </View>
   );
 }
