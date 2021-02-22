@@ -1,6 +1,6 @@
 {
     "identityPoolName": "sybmobileapp79332bea_identitypool_79332bea",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "sybmob79332bea",
     "userPoolName": "sybmobileapp79332bea_userpool_79332bea",
     "autoVerifiedAttributes": [

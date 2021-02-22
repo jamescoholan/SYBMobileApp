@@ -1,0 +1,21 @@
+{
+    "appName": "sybmobileapp",
+    "roleName": "pinpointLambdaRolefdf0e961",
+    "cloudformationPolicyName": "cloudformationPolicyfdf0e961",
+    "cloudWatchPolicyName": "cloudWatchPolicyfdf0e961",
+    "pinpointPolicyName": "pinpointPolicyfdf0e961",
+    "authPolicyName": "pinpoint_amplify_fdf0e961",
+    "unauthPolicyName": "pinpoint_amplify_fdf0e961",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}
