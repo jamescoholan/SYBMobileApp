@@ -78,7 +78,7 @@ export default function TabTwoScreen() {
         style={{width: 400, height: 400}}
       />
       <Image
-        source={require('../assets/images/SYBViz/PIIICs17.jpg')}
+        source={require('../assets/images/SYBViz/PIIICs18.jpg')}
         style={{width: 400, height: 400}}
       />
 
