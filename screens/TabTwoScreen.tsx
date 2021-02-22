@@ -78,11 +78,10 @@ export default function TabTwoScreen() {
         style={{width: 400, height: 400}}
       />
       <Image
-        source={require('../assets/images/SYBViz/PIIICs13.jpg')}
+        source={require('../assets/images/SYBViz/PIIICs17.jpg')}
         style={{width: 400, height: 400}}
       />
 
-      
     </View>
     </ScrollView>
   );
