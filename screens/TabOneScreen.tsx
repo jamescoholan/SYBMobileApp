@@ -13,7 +13,9 @@ export default function TabOneScreen() {
     <View style={styles.container}>
       <Image
         source={require('../assets/images/SYBLogo.png')}
-        style={{width: 200, height: 60}}
+        style={{
+          width: 200, 
+          height: 60}}
       />
      
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
