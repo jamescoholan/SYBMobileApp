@@ -15,12 +15,7 @@ export default function TabTwoScreen() {
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> 
       <EditScreenInfo2 path="/screens/TabTwoScreen.tsx" />
 
-      <Button
-    title="Play"
-    onPress={() => {
-        console.log('pressed');
-    }}
-/>
+      
 <Image
         source={require('../assets/images/SYBIcon.png')}
         style={{width: 400, height: 400}}
@@ -78,7 +73,7 @@ export default function TabTwoScreen() {
         style={{width: 400, height: 400}}
       />
       <Image
-        source={require('../assets/images/SYBViz/PIIICs18.jpg')}
+        source={require('../assets/images/SYBViz/PIIICs19.jpg')}
         style={{width: 400, height: 400}}
       />
 
@@ -98,6 +93,7 @@ const styles = StyleSheet.create({
     fontSize: 50,
     fontWeight: 'bold',
   },
+  
   separator: {
     marginVertical: 30,
     height: 1,
