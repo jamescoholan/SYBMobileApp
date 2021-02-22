@@ -13,11 +13,10 @@ export default function EditScreenInfo({ path }: { path: string }) {
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)">
-          The SYB{'\n'}Mobile Experience!
-        </Text>   
+          The SYB{'\n'}Mobile Experience
+        </Text>
       </View>
 
-      
       <View style={styles.helpContainer}>
         <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
           <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
