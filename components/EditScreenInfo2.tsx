@@ -8,25 +8,24 @@ import { Text, View, Image } from './Themed';
 export default function EditScreenInfo2({ path }: { path: string }) {
   return (
     <View>
-      <View style={styles.getStartedContainer}>
-        <Text
-          style={styles.getStartedText}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
-            Instagram
-        </Text>
-      </View>
-
       <View style={styles.helpContainer}>
         <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
           <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-           SYB Instagram
+           SYB {'\n'} Instagram
           </Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 }
+
+//<View style={styles.getStartedContainer}>
+//        <Text
+//          style={styles.getStartedText}
+//          lightColor="rgba(0,0,0,0.8)"
+//          darkColor="rgba(255,255,255,0.8)">        
+//        </Text>
+//      </View>
 
 function handleHelpPress() {
   WebBrowser.openBrowserAsync(
@@ -89,5 +88,8 @@ const styles = StyleSheet.create({
   },
   helpLinkText: {
     textAlign: 'center',
+    fontSize: 30,
+    marginBottom: 30,
+    marginTop: 30,
   },
 });

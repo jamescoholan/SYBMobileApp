@@ -13,12 +13,11 @@ export default function EditScreenInfo({ path }: { path: string }) {
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)">
-          The Official SYB App
+          The SYB {'\n'}Mobile Experience
         </Text>   
       </View>
 
       
-
       <View style={styles.helpContainer}>
         <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
           <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
@@ -78,7 +77,7 @@ const styles = StyleSheet.create({
   },
   getStartedText: {
     fontSize: 20,
-    lineHeight: 24,
+    lineHeight: 30,
     textAlign: 'center',
   },
   helpContainer: {
@@ -91,5 +90,9 @@ const styles = StyleSheet.create({
   },
   helpLinkText: {
     textAlign: 'center',
+    fontSize: 30,
+    marginBottom: 30,
+    marginTop: 30,
+    
   },
 });
