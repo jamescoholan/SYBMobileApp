@@ -1,9 +1,10 @@
-import * as React from "react";
-import { StyleSheet, Image, Button } from "react-native";
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Image, Button, ActivityIndicator, FlatList,} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 import { Audio, Video } from "expo-av";
+import axios from 'axios';
 
 export default function TabOneScreen() {
   const [sound, setSound] = React.useState();
@@ -27,9 +28,33 @@ export default function TabOneScreen() {
       : undefined;
   }, [sound]);
 
+  const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://reactnative.dev/movies.json')
+      .then((response) => response.json())
+      .then((json) => setData(json.movies))
+      .catch((error) => console.error(error))
+      .finally(() => setLoading(false));
+  }, []);
+
+
   return (
     <ScrollView>
       <View style={styles.container}>
+
+      <View style={{ flex: 1, padding: 24 }}>
+      {isLoading ? <ActivityIndicator/> : (
+        <FlatList
+          data={data}
+          keyExtractor={({ id }, index) => id}
+          renderItem={({ item }) => (
+            <Text>{item.title}, {item.releaseYear}</Text>
+          )}
+        />
+      )}
+    </View>
 
         <Image
           source={require("../assets/images/SYBLogo.png")}
@@ -62,32 +87,7 @@ export default function TabOneScreen() {
           style={{ width: 300, height: 200, marginTop: 40, marginBottom: 50 }}
         />
 
-        <Video
-          source={{
-            uri:
-              "https://sybvideos.s3-us-west-1.amazonaws.com/Overtaken+Final+Jan+29+mp4.mp4",
-          }}
-          rate={1.0}
-          volume={1.0}
-          isMuted={true}
-          resizeMode="cover"
-          shouldPlay
-          isLooping
-          style={{ width: 300, height: 200, marginTop: 40, marginBottom: 50 }}
-        />
-        <Video
-          source={{
-            uri:
-              "https://sybvideos.s3-us-west-1.amazonaws.com/Overtaken+Final+Jan+29+mp4.mp4",
-          }}
-          rate={1.0}
-          volume={1.0}
-          isMuted={true}
-          resizeMode="cover"
-          shouldPlay
-          isLooping
-          style={{ width: 300, height: 200, marginTop: 40, marginBottom: 50 }}
-        />
+        
       </View>
     </ScrollView>
   );
