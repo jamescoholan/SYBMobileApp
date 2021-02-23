@@ -1,25 +1,25 @@
 {
-    "dev": {
+    "sybmobile": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-sybmobileapp-dev-104323-authRole",
-            "UnauthRoleArn": "arn:aws:iam::554578744415:role/amplify-sybmobileapp-dev-104323-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::554578744415:role/amplify-sybmobileapp-dev-104323-authRole",
+            "AuthRoleName": "amplify-sybmobileapp-sybmobile-200836-authRole",
+            "UnauthRoleArn": "arn:aws:iam::554578744415:role/amplify-sybmobileapp-sybmobile-200836-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::554578744415:role/amplify-sybmobileapp-sybmobile-200836-authRole",
             "Region": "us-west-2",
-            "DeploymentBucketName": "amplify-sybmobileapp-dev-104323-deployment",
-            "UnauthRoleName": "amplify-sybmobileapp-dev-104323-unauthRole",
-            "StackName": "amplify-sybmobileapp-dev-104323",
-            "StackId": "arn:aws:cloudformation:us-west-2:554578744415:stack/amplify-sybmobileapp-dev-104323/aec952f0-7474-11eb-a6d3-02c0b9020c29",
-            "AmplifyAppId": "d34ze5cderte3p"
+            "DeploymentBucketName": "amplify-sybmobileapp-sybmobile-200836-deployment",
+            "UnauthRoleName": "amplify-sybmobileapp-sybmobile-200836-unauthRole",
+            "StackName": "amplify-sybmobileapp-sybmobile-200836",
+            "StackId": "arn:aws:cloudformation:us-west-2:554578744415:stack/amplify-sybmobileapp-sybmobile-200836/d0660430-758c-11eb-b18c-063358fac729",
+            "AmplifyAppId": "d8h9026zt136i"
         },
         "categories": {
             "hosting": {
                 "amplifyhosting": {
-                    "appId": "d34ze5cderte3p",
-                    "type": "manual"
+                    "appId": "d8h9026zt136i",
+                    "type": "cicd"
                 }
             },
             "auth": {
-                "sybmobileapp79332bea": {}
+                "cognito8241247e": {}
             }
         }
     }
