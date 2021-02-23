@@ -1,5 +1,12 @@
-type Todo @model {
+
+type Todo 
+@model 
+@key(name: "categoryIndex" fields:["category", "priority"], queryField: "todosByCategory")
+
+{
   id: ID!
   name: String!
   description: String
+  category: String
+  priority: Int
 }

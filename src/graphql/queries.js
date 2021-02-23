@@ -7,6 +7,8 @@ export const getTodo = /* GraphQL */ `
       id
       name
       description
+      category
+      priority
       createdAt
       updatedAt
     }
@@ -23,6 +25,38 @@ export const listTodos = /* GraphQL */ `
         id
         name
         description
+        category
+        priority
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const todosByCategory = /* GraphQL */ `
+  query TodosByCategory(
+    $category: String
+    $priority: ModelIntKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelTodoFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    todosByCategory(
+      category: $category
+      priority: $priority
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        name
+        description
+        category
+        priority
         createdAt
         updatedAt
       }

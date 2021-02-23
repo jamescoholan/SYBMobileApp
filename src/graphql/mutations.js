@@ -10,6 +10,8 @@ export const createTodo = /* GraphQL */ `
       id
       name
       description
+      category
+      priority
       createdAt
       updatedAt
     }
@@ -24,6 +26,8 @@ export const updateTodo = /* GraphQL */ `
       id
       name
       description
+      category
+      priority
       createdAt
       updatedAt
     }
@@ -38,6 +42,8 @@ export const deleteTodo = /* GraphQL */ `
       id
       name
       description
+      category
+      priority
       createdAt
       updatedAt
     }
