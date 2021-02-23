@@ -4,7 +4,6 @@ import { ScrollView } from "react-native-gesture-handler";
 import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 import { Audio, Video } from "expo-av";
-import LottieView from 'lottie-react-native';
 
 export default function TabOneScreen() {
   const [sound, setSound] = React.useState();

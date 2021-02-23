@@ -2,6 +2,7 @@ import * as React from "react";
 import { StyleSheet, Image, Button, ScrollView } from "react-native";
 import EditScreenInfo2 from "../components/EditScreenInfo2";
 import { Text, View } from "../components/Themed";
+import { Appearance } from 'react-native';
 
 export default function TabTwoScreen() {
   return (
