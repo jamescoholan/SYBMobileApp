@@ -67,17 +67,49 @@ export default function TabOneScreen() {
         <Button title="Play Song" onPress={playSound} />
 
         <View style={{ flex: 1, padding: 24 }}>
-      {isLoading ? <Text>Loading...</Text> : 
-      ( <View style={{ flex: 1, flexDirection: 'column', justifyContent:  'space-between'}}>
-          <Text style={{ fontSize: 20, color: 'blue', textAlign: 'center'}}>{data.name}</Text>
-          <Text style={{ fontSize: 20, color: 'blue', textAlign: 'center'}}>{data.height}</Text>
-          <Text style={{ fontSize: 20, color: 'blue', textAlign: 'center'}}>{data.hair_color}</Text>
-          <Text style={{ fontSize: 20, color: 'blue', textAlign: 'center'}}>{data.gender}</Text>
-          <Text style={{ fontSize: 20, color: 'blue', textAlign: 'center'}}>{data.eye_color}</Text>
-          <Text style={{ fontSize: 20, color: 'blue', textAlign: 'center'}}>{data.skin_color}</Text>
+          {isLoading ? (
+            <Text>Loading...</Text>
+          ) : (
+            <View
+              style={{
+                flex: 1,
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text
+                style={{ fontSize: 20, color: "blue", textAlign: "center" }}
+              >
+                {data.name}
+              </Text>
+              <Text
+                style={{ fontSize: 20, color: "blue", textAlign: "center" }}
+              >
+                {data.height}
+              </Text>
+              <Text
+                style={{ fontSize: 20, color: "blue", textAlign: "center" }}
+              >
+                {data.hair_color}
+              </Text>
+              <Text
+                style={{ fontSize: 20, color: "blue", textAlign: "center" }}
+              >
+                {data.gender}
+              </Text>
+              <Text
+                style={{ fontSize: 20, color: "blue", textAlign: "center" }}
+              >
+                {data.eye_color}
+              </Text>
+              <Text
+                style={{ fontSize: 20, color: "blue", textAlign: "center" }}
+              >
+                {data.skin_color}
+              </Text>
+            </View>
+          )}
         </View>
-      )}
-    </View>
 
         <Video
           source={{
